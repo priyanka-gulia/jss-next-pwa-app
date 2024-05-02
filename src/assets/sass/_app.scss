@@ -1,0 +1,156 @@
+
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 0px;
+  height: auto !important;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  position: relative;
+  overflow: auto;
+  color: $text-basic;
+  font-size: 19px;
+  line-height: 1.5;
+  background: $page-bg;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: auto !important;
+  &.on-page-editor {
+    background: $page-bg-editor !important;
+  }
+}
+
+a {
+  color: $text-basic;
+  cursor: pointer;
+  font-size: 0.85em;
+  &:hover {
+    color: $text-basic-active;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.83em;
+}
+
+h6 {
+  font-size: 0.67em;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.xa-variable {
+  border: 0px;
+  padding: 1px;
+  margin: 0px;
+  background-color: #ebebe4;
+  color: #545454;
+  user-select: none;
+  pointer-events: none;
+}
+
+//Navigation Bar fix
+#breadcrumbMenuSubcontrol_context_menu * {
+  box-sizing: initial;
+}
+
+//End navigation bar fix
+.menu-mobile-navigate {
+  display: none;
+}
+
+#header, #content, #footer, .sc-jss-empty-placeholder {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sc-jss-placeholder-error {
+  background: #ff0000;
+  outline: 5px solid #e36565;
+  padding: 10px;
+  color:#fff;
+  max-width: 500px;
+}
+
+.page-wrapper{
+  background-position: -326px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  &::before{
+    content:'';
+    position: absolute;
+    top:0;
+    bottom: 0;;
+    left:0;
+    right: 0;
+    background-color: rgba(255,255,255,0.6);
+    z-index: 0;
+  }
+}
+.main{position: relative;}
+.page-content {
+  position: absolute;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  top:0;
+  bottom: 0;;
+  left:0;
+  right: -456px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+}
+h1{font-size: 70px;
+  line-height: 78px;margin-bottom:50px;max-width: 840px;}
+  .text-right{
+    text-align: right;
+  }
+  .description{
+    max-width: 830px;
+  
+  }
+  a{
+    text-decoration: none;
+    color:#000000;
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #000000;
+  }
+  p{
+    margin-bottom: 22px;
+  }
