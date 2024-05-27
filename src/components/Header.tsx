@@ -33,9 +33,9 @@ const Header = ({}: HeaderProps): JSX.Element => (
       <a className="link-2" href="mailto:priyankaguliya@gmail.com">
         priyankaguliya@gmail.com
       </a>
-    </div>
-    <div>
-      <PushNotification />
+      <div className="mt-5">
+        <PushNotification />
+      </div>
     </div>
   </div>
 );

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Head from 'next/head';
 
 const base64ToUint8Array = (base64: string): Uint8Array => {
   const padding = '='.repeat((4 - (base64.length % 4)) % 4);
@@ -52,16 +51,6 @@ const PushNotification: React.FC = () => {
     console.log(sub);
   };
 
-  const unsubscribeButtonOnClick = async (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-    if (!subscription) return;
-    await subscription.unsubscribe();
-    // TODO: you should call your API to delete or invalidate subscription data on server
-    setSubscription(null);
-    setIsSubscribed(false);
-    console.log('web push unsubscribed!');
-  };
-
   const sendNotificationButtonOnClick = async (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     if (!subscription) {
@@ -81,20 +70,22 @@ const PushNotification: React.FC = () => {
   };
 
   return (
-    <>
-      <Head>
-        <title>next-pwa example</title>
-      </Head>
-      <button onClick={subscribeButtonOnClick} disabled={isSubscribed}>
-        Subscribe
-      </button>
-      {/* <button onClick={unsubscribeButtonOnClick} disabled={!isSubscribed}>
-        Unsubscribe
-      </button> */}
-      <button onClick={sendNotificationButtonOnClick} disabled={!isSubscribed}>
-        Send Notification
-      </button>
-    </>
+    <div className="btn-container">
+      <div>
+        <button onClick={subscribeButtonOnClick} disabled={isSubscribed} className="btn-rahul">
+          Subscribe
+        </button>
+      </div>
+      <div>
+        <button
+          onClick={sendNotificationButtonOnClick}
+          disabled={!isSubscribed}
+          className="btn-rahul"
+        >
+          Send Notification
+        </button>
+      </div>
+    </div>
   );
 };
 
