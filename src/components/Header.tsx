@@ -1,6 +1,7 @@
 import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import PushNotification from './PushNotification';
+import InstallCustomPWA from './InstallCustomPWA';
 
 type HeaderProps = ComponentProps & {
   fields: {
@@ -35,6 +36,9 @@ const Header = ({}: HeaderProps): JSX.Element => (
       </a>
       <div className="mt-5">
         <PushNotification />
+      </div>
+      <div>
+        <InstallCustomPWA />
       </div>
     </div>
   </div>
